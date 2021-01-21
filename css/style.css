@@ -1,0 +1,37 @@
+body{
+   background-color: darkgray;
+   padding: 5%;
+   margin: 5%;
+}
+
+
+header{
+    background-color:darkred;
+}
+.logo{
+    width: 200px;
+    height: 60px;
+}
+.box
+.box{
+    width: 300px;
+    height: 150;
+    padding: 20px;
+    margin: 100px auto;
+}
+
+.menu_header{
+    float: right;
+    padding: 1%;
+    margin: 1%;
+}
+
+.menu_header a{
+    
+  padding: 0px 10px;
+  word-wrap: normal;
+  display: inline-block;
+  color: slategrey;
+  font-size: 30px;
+  text-decoration: none;
+}
