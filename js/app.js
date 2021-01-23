@@ -21,7 +21,7 @@ var Seattle =
 
         for (var x =0;x<hours.length;x++)
         {
-            this.Number_of_customer_per_hour[x]= Get_random_number(this.min_customer_per_hour,this.max_customer_per_hour);    
+            this.Number_of_customer_per_hour[x]= Get_random_number( this.min_customer_per_hour,this.max_customer_per_hour);    
         }
     },
 
