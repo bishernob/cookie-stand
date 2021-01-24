@@ -64,6 +64,7 @@ function Get_random_number(minimum, maximum) {
 }
 
 
+
 Branches.prototype.Numberofcustomer_perhour = function() {
 	for (var x = 0; x < hours.length; x++) {
 		this.Number_of_customer_per_hour[x] = Get_random_number(this.min_customer_per_hour,this.max_customer_per_hour);
@@ -153,6 +154,58 @@ function submit(event) {
   
 
 }
+
+=======
+
+
+Branches.prototype.Numberofcustomer_perhour = function() {
+	for (var x = 0; x < hours.length; x++) {
+		this.Number_of_customer_per_hour[x] = Get_random_number(this.min_customer_per_hour,this.max_customer_per_hour);
+	}
+	
+};
+
+
+
+
+Branches.prototype.Numberofcookies_perhour = function (){
+	var numberofcookies;
+	
+		for (var x = 0; x < this.Number_of_customer_per_hour.length; x++) {
+			numberofcookies = Math.ceil(this.Number_of_customer_per_hour[x] * this.avg_cookies_sale,);
+			this.Number_of_cookies_per_hour.push(numberofcookies);
+			this.Total_num_of_cookies += numberofcookies;
+		}
+		return this.Total_num_of_cookies;
+};
+
+Branches.prototype.render= function(){
+	this.Numberofcookies_perhour();
+	var tr = document.createElement('tr');
+	var td = document.createElement('td');
+	for (var i = 0; i <= this.Number_of_cookies_per_hour.length; i++){
+		td=document.createElement('td');
+
+		if(i === 0 ) {
+			td.textContent = this.name;
+			
+		} else if(i === this.Number_of_cookies_per_hour.length) {
+			// td.textContent = "total";
+		}else {
+			td.textContent = this.Number_of_cookies_per_hour[i - 1];
+			
+		}
+		tr.appendChild(td);
+	
+	} 
+	if(i === this.Number_of_cookies_per_hour.length+1) {
+		td.textContent=this.Total_num_of_cookies;
+		tr.appendChild(td);
+	}	
+	table_of_branches.appendChild(tr);
+
+};
+
 
 
 Seattle.Numberofcustomer_perhour();
