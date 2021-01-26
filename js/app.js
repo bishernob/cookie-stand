@@ -155,7 +155,6 @@ function submit(event) {
 
 }
 
-=======
 
 
 Branches.prototype.Numberofcustomer_perhour = function() {
